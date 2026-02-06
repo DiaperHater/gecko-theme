@@ -1,0 +1,67 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Gecko\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-06 20:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.1; wp-6.9.1; php-8.2.27\n"
+"X-Domain: gecko"
+
+#: template-parts/prices.php:54
+msgid "AED / Hour"
+msgstr ""
+
+#: header.php:86 header.php:119
+msgid "Contacts"
+msgstr ""
+
+#. Name of the theme
+msgid "Gecko"
+msgstr ""
+
+#: header.php:74 header.php:110
+msgid "Our coach"
+msgstr ""
+
+#: header.php:65 header.php:101
+msgid "Perfect for"
+msgstr ""
+
+#: header.php:71 header.php:107
+msgid "Prices"
+msgstr ""
+
+#: header.php:32
+msgid ""
+"Professional Roller Skating Classes in Dubai for Adults and Children. Group "
+"and Private Lessons Available."
+msgstr ""
+
+#: header.php:30
+msgid "Roller skating classes in Dubai"
+msgstr ""
+
+#: template-parts/form.php:9
+msgid "Schedule a Session"
+msgstr ""
+
+#: header.php:68 header.php:104
+msgid "Skill levels"
+msgstr ""
+
+#: template-parts/levels.php:31
+msgid "Suitable for:"
+msgstr ""
+
+#. Author of the theme
+msgid "Valery Pronin aka Vxl"
+msgstr ""

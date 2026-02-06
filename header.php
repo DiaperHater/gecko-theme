@@ -1,5 +1,8 @@
+<?php
+global $gecko;
+?>
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="<?php echo $gecko->current_lang ?>" class="scroll-smooth">
 
 <head>
 	<meta charset="UTF-8">
@@ -12,7 +15,7 @@
 
 	<?php wp_head() ?>
 
-  <!-- START Script that provides structured data about a local business in Dubai -->
+	<!-- START Script that provides structured data about a local business in Dubai -->
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -24,9 +27,9 @@
 				"closes": "22:00"
 			}
 			"@type": "LocalBusiness",
-			"name": "Уроки катания на роликах в Дубае",
+			"name": "<?php _e('Roller skating classes in Dubai', 'gecko') ?>",
 			"image": "https://dxbskating.com/wp-content/uploads/2024/02/332792747_1242813499964178_1093700584803525692_n-1024x768.jpeg",
-			"description": "Профессиональные уроки катания на роликах в Дубае для взрослых и детей. Групповые и индивидуальные занятия.",
+			"description": "<?php _e('Professional Roller Skating Classes in Dubai for Adults and Children. Group and Private Lessons Available.', 'gecko') ?>",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "Dubai",
@@ -36,7 +39,7 @@
 			"priceRange": "AED 75-300 per session"
 		}
 	</script>
-  <!-- END Script that provides structured data about a local business in Dubai -->
+	<!-- END Script that provides structured data about a local business in Dubai -->
 
 	<title><?= get_the_title() ?></title>
 
@@ -54,21 +57,21 @@
 				<nav class="header__inner py-3 flex items-center duration-200 group-[.narrow]/header:px-6 group-[.narrow]/header:bg-neutral-900 group-[.narrow]/header:bg-opacity-20 group-[.narrow]/header:backdrop-blur-sm group-[.narrow]/header:rounded-lg">
 					<!-- Logo -->
 					<a href="/" class="mr-12 text-2xl font-bold leading-none divide-purple-200 hover:text-blue-500">
-						dXb Skating
+						Gecko
 					</a>
 					<!-- Links -->
 					<ul class="hidden lg:flex lg:items-center lg:gap-x-4 lg:ml-auto">
 						<a href="#about" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
-							Для кого
+							<?php _e('Perfect for', 'gecko') ?>
 						</a>
 						<a href="#levels" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
-							Уровни
+							<?php _e('Skill levels', 'gecko') ?>
 						</a>
 						<a href="#prices" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
-							Цены
+							<?php _e('Prices', 'gecko') ?>
 						</a>
 						<a href="#coach" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
-							Тренер
+							<?php _e('Our coach', 'gecko') ?>
 						</a>
 					</ul>
 					<!-- Buttons -->
@@ -80,7 +83,7 @@
 							<div class="w-full h-1 bg-white rounded-lg duration-200 origin-bottom-right group-[.active]:rotate-45 group-hover:bg-blue-500"></div>
 						</button>
 						<a href="#form" class="hidden border border-white !bg-blue-500 hover:!text-white hover:!bg-neutral-900 lg:block lg:button">
-							Контакты
+							<?php _e('Contacts', 'gecko') ?>
 						</a>
 					</div>
 				</nav>
@@ -95,25 +98,25 @@
 						<!-- Links -->
 						<ul class="flex flex-col gap-y-4">
 							<a href="#about" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
-								Для кого
+								<?php _e('Perfect for', 'gecko') ?>
 							</a>
 							<a href="#levels" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
-								Уровни
+								<?php _e('Skill levels', 'gecko') ?>
 							</a>
 							<a href="#prices" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
-								Цены
+								<?php _e('Prices', 'gecko') ?>
 							</a>
 							<a href="#coach" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
-								Тренер
+								<?php _e('Our coach', 'gecko') ?>
 							</a>
 						</ul>
 						<!-- Socials -->
 						<div class="flex items-center self-center gap-x-8">
-							<?php get_template_part( 'template-parts/components/social-icons', null ) ?>
+							<?php get_template_part('template-parts/social-icons', null) ?>
 						</div>
 						<!-- Contact -->
 						<a href="#form" class="self-center button">
-							Контакты
+							<?php _e('Contacts', 'gecko') ?>
 						</a>
 					</div>
 				</div>

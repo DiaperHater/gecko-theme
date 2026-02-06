@@ -1,7 +1,6 @@
 <?php
 
 define('DEBUG', false);
-
 if (!defined('S_VERSION')) {
   define('S_VERSION', DEBUG ? microtime() : '1.0.0');
 }
@@ -31,24 +30,36 @@ function gecko_admin_theme_setup()
 }
 add_action('after_setup_theme', 'gecko_admin_theme_setup');
 
-
-function register_custom_post_types()
+function disable_editor_for_pages()
 {
-  register_post_type(
-    'testimonial',
-    array(
-      'labels'      => array(
-        'name'          => __('Testimonials', 'gecko'),
-        'singular_name' => __('Testimonial', 'gecko'),
-      ),
-      'public'      => true,
-      'has_archive' => false,
-      'menu_icon' => 'dashicons-testimonial',
-      'supports' => array('title')
-    )
-  );
+  remove_post_type_support('page', 'editor');
 }
-add_action('init', 'register_custom_post_types');
+add_action('init', 'disable_editor_for_pages');
+
+// Dont show admin bar on frontend 
+add_filter('show_admin_bar', '__return_false');
 
 // CF7
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+function svg_upload_allow($mimes)
+{
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'svg_upload_allow');
+
+class GeckoTheme
+{
+  public $current_lang = 'en';
+
+  public function __construct()
+  {
+    if (function_exists('pll_current_language')) {
+      $this->current_lang = pll_current_language();
+    }
+  }
+}
+$gecko = new GeckoTheme();
+
+require_once get_stylesheet_directory() . '/inc/acf-fields.php';
