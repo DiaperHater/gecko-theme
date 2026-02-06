@@ -1,16 +1,6 @@
 <?php
-function print_level_card( $level_num, $text ) {
-	?>
-	<div class="relative w-full">
-
-		<img src="/wp-content/uploads/2024/02/Level-<?= $level_num ?>.png" alt="dxbskating Rolling Class Level 1" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] aspect-square object-contain object-center z-10">
-
-		<p class="relative p-6 pt-20 text-xl text-center duration-500 bg-white border rounded-lg shadow-xl cursor-default text-neutral-700">
-			<?= $text ?>
-		</p>
-	</div>
-	<?php
-}
+$heading = get_sub_field('levels_heading');
+$cards = get_sub_field('levels_cards');
 ?>
 <!-- Levels -->
 <section id="levels" class="relative py-24 text-white bg-blue-500 md:py-32">
@@ -22,60 +12,36 @@ function print_level_card( $level_num, $text ) {
 		<div class="box">
 			<!-- Heading with Dubai-focused keyword -->
 			<h2 class="mb-24 text-center heading md:mb-32">
-				Уроки катания на роликах в Дубае для любого уровня
+				<?php echo $heading ?>
 			</h2>
 
 			<!-- Cards -->
 			<div class="grid gap-12 gap-y-24 justify-items-center md:gap-24 md:grid-cols-2">
-				<!-- Card 1: Beginner (Новичок) -->
-				<div class="relative w-full">
-					<img src="/wp-content/uploads/2024/02/Level-1.png" alt="Обучение катанию на роликах в Дубае для начинающих | dxbskating" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] aspect-square object-contain object-center z-10">
-					<p class="relative p-6 pt-20 text-xl text-center duration-500 bg-white border rounded-lg shadow-xl cursor-default text-neutral-700">
-						Идеальный курс для новичков в Дубае, которые только начинают кататься на роликах. Научим основам: безопасное движение по прямой, торможение и повороты. Занятия проходят в парках Дубая (Mushrif, Creek harbour, Damac hills, Dubai harbour, Al barsha, Kite beach, Shoba hartland) и на крытых площадках.
-						<br><br>
-						<strong>Подходит для:</strong><br>
-						• Абсолютных новичков в Дубае<br>
-						• Детей и взрослых (Dubai Marina, JBR, Downtown)
-					</p>
-				</div>
-
-				<!-- Card 2: Intermediate (Любитель) -->
-				<div class="relative w-full">
-					<img src="/wp-content/uploads/2024/02/Level-2.png" alt="Продвинутые уроки роликов в Дубае | dxbskating Level 2" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] aspect-square object-contain object-center z-10">
-					<p class="relative p-6 pt-20 text-xl text-center duration-500 bg-white border rounded-lg shadow-xl cursor-default text-neutral-700">
-						Для тех, кто уже катается в Дубае, но хочет уверенно преодолевать городские препятствия (тротуары, спуски в Business Bay). Научим экстренному торможению и скоростному катанию спиной вперёд.
-						<br><br>
-						<strong>Подходит для:</strong><br>
-						• Роллеров с опытом в Дубае<br>
-						• Подготовка к катанию в скейт-парках (Dubai Skatepark, XDubai)<br>
-						• Выпускников Level 1
-					</p>
-				</div>
-
-				<!-- Card 3: Advanced (Продвинутый) -->
-				<div class="relative w-full">
-					<img src="/wp-content/uploads/2024/02/Level-3.png" alt="Профессиональные трюки на роликах в Дубае | dxbskating Level 3" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] aspect-square object-contain object-center z-10">
-					<p class="relative p-6 pt-20 text-xl text-center duration-500 bg-white border rounded-lg shadow-xl cursor-default text-neutral-700">
-						Трюковый курс для продвинутых роллеров Дубая: прыжки, слайды, грайнды. Тренировки проходят в лучших скейт-парках эмирата (The Block Dubai, Dubai Hills Park).
-						<br><br>
-						<strong>Подходит для:</strong><br>
-						• Роллеров, готовящихся к соревнованиям в ОАЭ<br>
-						• Любителей фристайла (Dubai Design District)<br>
-						• Выпускников Level 2
-					</p>
-				</div>
-
-				<!-- Card 4: Pro (Профессионал) -->
-				<div class="relative w-full">
-					<img src="/wp-content/uploads/2024/02/Level-4.png" alt="Соревновательный спидскейтинг в Дубае | dxbskating Pro Level" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] aspect-square object-contain object-center z-10">
-					<p class="relative p-6 pt-20 text-xl text-center duration-500 bg-white border rounded-lg shadow-xl cursor-default text-neutral-700">
-						Программа для будущих чемпионов ОАЭ по спидскейтингу и парковому катанию. Индивидуальные тренировки на Olympic-sized треках (Nad Al Sheba).
-						<br><br>
-						<strong>Подходит для:</strong><br>
-						• Атлетов, выступающих на Red Bull events UAE<br>
-						• Выпускников Level 3
-					</p>
-				</div>
+				<?php
+				foreach ($cards as $index => $card) {
+					?>
+					<div class="relative w-full">
+						<img src="/wp-content/uploads/2024/02/Level-<?php echo $index + 1 ?>.png" alt="Обучение катанию на роликах в Дубае для начинающих | dxbskating" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] aspect-square object-contain object-center z-10">
+						<p class="relative p-6 pt-20 text-xl text-center duration-500 bg-white border rounded-lg shadow-xl cursor-default text-neutral-700">
+							<?php echo $card['levels_cards_description'] ?>
+							<?php
+							if ($card['levels_cards_list'] && !empty($card['levels_cards_list'])) {
+								?>
+								<br><br>
+								<strong><?php _e('Suitable for:', 'gecko') ?></strong><br>
+								<?php
+								foreach ($card['levels_cards_list'] as $item) {
+									echo "• {$item['levels_cards_list_text']}<br>";
+								}
+								?>
+								<?php
+							}
+							?>
+						</p>
+					</div>
+					<?php
+				}
+				?>
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <?php
-$image = get_sub_field('image');
-$heading = get_sub_field('heading');
-$link = get_sub_field('link');
+$image = get_sub_field('cta_image');
+$heading = get_sub_field('cta_heading');
+$link = get_sub_field('cta_link');
 ?>
 
 <!-- CTA -->
@@ -15,8 +15,8 @@ $link = get_sub_field('link');
       <h2 class="heading mb-16 text-white text-center">
         <?= $heading ?>
       </h2>
-      <a href="<?= $link['url'] ?>" class="button">
-        <?= $link['title'] ?>
+      <a href="<?php echo $link['url'] ?>" class="button">
+        <?php echo $link['title'] ?>
       </a>
     </div>
   </div>

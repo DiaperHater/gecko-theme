@@ -1,13 +1,12 @@
+<?php
+$intro = get_sub_field('about_intro');
+?>
 <!-- About -->
 <section id="about" class="bg-blue-500 py-24 relative">
   <div class="wrapper">
     <div class="box">
       <p class="subheading text-white font-normal text-center">
-        Безопасные и уникальные уроки катания на роликах в Дубае
-        <br>для взрослых и детей любого уровня .
-        <br>Неважно ты новичок и только встаешь на коньки
-        <br>или уже опытный роллер в поисках новых высот мастерства ,
-        <br>здесь ты станешь кататься еще лучше !
+        <?php echo $intro ?>
       </p>
     </div>
   </div>

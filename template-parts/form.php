@@ -1,3 +1,4 @@
+<?php global $gecko ?>
 <!-- Form -->
 <section id="form" class="py-24 bg-blue-500">
   <div class="wrapper">
@@ -5,7 +6,7 @@
       <div class="mb-24 grid gap-y-4">
         <!-- Heading -->
         <h2 class="heading text-white row-start-2">
-          Запись на тренировку
+          <?php _e('Schedule a Session', 'gecko') ?>
         </h2>
         <!-- Contacts -->
         <div class="flex flex-col items-end">
@@ -14,13 +15,19 @@
           </a>
           <!-- Socials -->
           <div class="flex gap-x-6 ml-auto text-white">
-            <?php get_template_part('template-parts/components/social-icons', null, array('hover_off' => true)) ?>
+            <?php get_template_part('template-parts/social-icons', null, array('hover_off' => true)) ?>
           </div>
         </div>
       </div>
       <!-- FormForm -->
       <div class="max-w-xl mx-auto">
-        <?= do_shortcode('[contact-form-7 id="9b147c5" title="Contact form 1"]') ?>
+        <?php
+        if ($gecko->current_lang === 'ru') {
+          echo do_shortcode('[contact-form-7 id="840238b" title="Contact form (Ru)"]');
+        } else {
+          echo do_shortcode('[contact-form-7 id="9b147c5"]');
+        }
+        ?>
       </div>
     </div>
   </div>
