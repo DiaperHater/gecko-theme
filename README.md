@@ -13,4 +13,8 @@ Edit style sources in _assets/css/src/input.css_
 ## ToDo:
 
 - [ ] SEO Works
-  - [ ] Translate
+  - [x] Translate
+  - [ ] Recolor
+  - [ ] Update media
+  - [ ] Upload
+  - [ ] Write out tasks from Journal

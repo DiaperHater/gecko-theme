@@ -75,13 +75,46 @@ class GeckoTheme
       ob_start();
       foreach ($langs as $lang) {
         ?>
-        <a href="<?php echo $lang['url'] ?>" class="text-inherit capitalize hover:text-blue-500 duration-200">
+        <a href="<?php echo $lang['url'] ?>" class="text-inherit capitalize hover:underline duration-200">
           <?php echo $lang['slug'] ?>
         </a>
         <?php
       }
       echo ob_get_clean();
     }
+  }
+
+  public function print_image_alt($text)
+  {
+    _e('Xtreme Gecko Roller & Bike School in Dubai ' . trim($text), 'gecko');
+  }
+
+  public function print_image_src($filename)
+  {
+    echo get_stylesheet_directory_uri() . '/assets/images/' . trim($filename);
+  }
+
+  public function print_stars($num = 5)
+  {
+    if($num <= 0 || $num > 5) {
+      return;
+    }
+    
+    ob_start();
+    ?>
+    <div class="flex gap-x-2 text-yellow-500">
+      <?php
+      for ($i = 0; $i < $num; $i++) {
+        ?>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd" />
+        </svg>
+        <?php
+      }
+      ?>
+    </div>
+    <?php
+    echo ob_get_clean();
   }
 }
 $gecko = new GeckoTheme();

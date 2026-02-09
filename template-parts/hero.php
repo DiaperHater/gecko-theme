@@ -7,14 +7,14 @@ $background = get_sub_field('hero_background');
 ?>
 
 <!-- HomeHero -->
-<section class="relative text-white">
+<section class="relative text-neutral-100">
   <!-- VideBG -->
   <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover object-center">
     <source src="<?= $background['hero_background_video']['url'] ?>" type="video/mp4" />
     <img src="<?= $background['hero_background_image']['sizes']['large'] ?>">
   </video>
   <!-- BgOverlay -->
-  <div class="absolute top-0 left-0 w-full h-full bg-neutral-900 bg-opacity-50"></div>
+  <div class="absolute top-0 left-0 w-full h-full bg-yellow-600/30"></div>
   <div class="wrapper relative">
     <div class="box">
       <!-- Inner -->

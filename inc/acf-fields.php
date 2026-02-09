@@ -126,7 +126,6 @@ add_action('acf/init', function () {
                 'name' => 'levels_cards',
                 'label' => 'Cards',
                 'type' => 'repeater',
-                'max' => 4,
                 'layout' => 'table',
                 'sub_fields' => array(
                   array(
@@ -353,15 +352,6 @@ add_action('acf/init', function () {
                     'type' => 'textarea',
                     'rows' => 3,
                     'new_lines' => 'br',
-                  ),
-                  array(
-                    'key' => 'reasons_cards_icon',
-                    'name' => 'reasons_cards_icon',
-                    'label' => 'Icon',
-                    'type' => 'image',
-                    'return_format' => 'array',
-                    'preview_size' => 'medium',
-                    'mime_types' => 'png, svg',
                   ),
                 ),
               ),

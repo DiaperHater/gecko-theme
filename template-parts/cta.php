@@ -12,7 +12,7 @@ $link = get_sub_field('cta_link');
   </picture>
   <div class="wrapper">
     <div class="box relative flex flex-col items-center">
-      <h2 class="heading mb-16 text-white text-center">
+      <h2 class="heading mb-16 text-neutral-100 text-center">
         <?= $heading ?>
       </h2>
       <a href="<?php echo $link['url'] ?>" class="button">

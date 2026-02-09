@@ -50,43 +50,44 @@ global $gecko;
 <body>
 
 	<!-- Header -->
-	<header class="bg-neutral-900 bg-opacity-20 backdrop-blur-sm text-white fixed top-0 left-0 w-full z-50 group/header [&.narrow]:top-6 [&.narrow]:bg-transparent [&.narrow]:backdrop-blur-none">
+	<header class="bg-neutral-900 bg-opacity-70 backdrop-blur-sm text-white fixed top-0 left-0 w-full z-50 group/header [&.narrow]:top-6 [&.narrow]:bg-transparent [&.narrow]:backdrop-blur-none">
 		<div class="wrapper">
 			<div class="box">
 				<!-- Inner -->
-				<nav class="header__inner py-3 flex items-center duration-200 group-[.narrow]/header:px-6 group-[.narrow]/header:bg-neutral-900 group-[.narrow]/header:bg-opacity-20 group-[.narrow]/header:backdrop-blur-sm group-[.narrow]/header:rounded-lg">
+				<nav class="header__inner py-3 flex items-center duration-200 group-[.narrow]/header:px-6 group-[.narrow]/header:bg-neutral-900 group-[.narrow]/header:bg-opacity-70 group-[.narrow]/header:backdrop-blur-sm group-[.narrow]/header:rounded-lg">
 					<!-- Logo -->
 					<a href="/" class="mr-12 text-2xl font-bold leading-none divide-purple-200 hover:text-blue-500">
-						Gecko
+						<img src="<?php $gecko->print_image_src('logo.png')?>" alt="<?php $gecko->print_image_alt('Logo') ?>" class="h-12 lg:h-20 w-auto">
 					</a>
 					<!-- Links -->
 					<ul class="hidden lg:flex lg:items-center lg:gap-x-4 lg:ml-auto">
-						<a href="#about" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
+						<a href="#about" class="text-lime-600 text-base uppercase duration-200 underline-offset-4 hover:underline">
 							<?php _e('Perfect for', 'gecko') ?>
 						</a>
-						<a href="#levels" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
+						<a href="#levels" class="text-lime-600 text-base uppercase duration-200 underline-offset-4 hover:underline">
 							<?php _e('Skill levels', 'gecko') ?>
 						</a>
-						<a href="#prices" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
+						<a href="#prices" class="text-lime-600 text-base uppercase duration-200 underline-offset-4 hover:underline">
 							<?php _e('Prices', 'gecko') ?>
 						</a>
-						<a href="#coach" class="text-base uppercase duration-200 underline-offset-4 hover:text-blue-500">
+						<a href="#coach" class="text-lime-600 text-base uppercase duration-200 underline-offset-4 hover:underline">
 							<?php _e('Our coach', 'gecko') ?>
 						</a>
 					</ul>
 					<!-- Buttons -->
 					<div class="flex items-center ml-auto gap-x-4 lg:ml-12">
 						<!-- Burger  -->
-						<button class="burger w-[36px] flex flex-col gap-y-2 group group-[.narrow]/header:gap-y-1.5 group-[.narrow]/header:w-[30px] lg:hidden" onclick="burgerOnClick()">
-							<div class="w-full h-1 bg-white rounded-lg duration-200 origin-top-right group-[.active]:-rotate-45 group-hover:bg-blue-500"></div>
-							<div class="w-full h-1 bg-white rounded-lg duration-200 group-[.active]:-translate-x-full group-[.active]:opacity-0 group-[.active]:invisible group-hover:bg-blue-500"></div>
-							<div class="w-full h-1 bg-white rounded-lg duration-200 origin-bottom-right group-[.active]:rotate-45 group-hover:bg-blue-500"></div>
+						<button class="burger w-[30px] flex flex-col gap-y-1.5 group group-[.narrow]/header:gap-y-1.5 group-[.narrow]/header:w-[30px] lg:hidden" onclick="burgerOnClick()">
+							<div class="w-full h-1 bg-lime-600 rounded-lg duration-200 origin-top-right group-[.active]:-rotate-45"></div>
+							<div class="w-full h-1 bg-lime-600 rounded-lg duration-200 group-[.active]:-translate-x-full group-[.active]:opacity-0 group-[.active]:invisible"></div>
+							<div class="w-full h-1 bg-lime-600 rounded-lg duration-200 origin-bottom-right group-[.active]:rotate-45"></div>
 						</button>
-						<a href="#form" class="hidden border border-white !bg-blue-500 hover:!text-white hover:!bg-neutral-900 lg:block lg:button">
+						<a href="#form" class="hidden lg:button">
 							<?php _e('Contacts', 'gecko') ?>
 						</a>
 					</div>
-					<div class="hidden lg:inline ml-8">
+					<!-- LangSwitch -->
+					<div class="hidden lg:inline ml-8 text-lime-600">
 						<?php $gecko->print_lang_switch() ?>
 					</div>
 				</nav>
@@ -100,16 +101,16 @@ global $gecko;
 					<div class="flex flex-col pb-40 gap-y-16 pt-14">
 						<!-- Links -->
 						<ul class="flex flex-col gap-y-4">
-							<a href="#about" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
+							<a href="#about" class="text-neutral-100 font-medium text-2xl text-center uppercase">
 								<?php _e('Perfect for', 'gecko') ?>
 							</a>
-							<a href="#levels" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
+							<a href="#levels" class="text-neutral-100 font-medium text-2xl text-center uppercase">
 								<?php _e('Skill levels', 'gecko') ?>
 							</a>
-							<a href="#prices" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
+							<a href="#prices" class="text-neutral-100 font-medium text-2xl text-center uppercase">
 								<?php _e('Prices', 'gecko') ?>
 							</a>
-							<a href="#coach" class="text-2xl text-center uppercase duration-200 hover:text-blue-500">
+							<a href="#coach" class="text-neutral-100 font-medium text-2xl text-center uppercase">
 								<?php _e('Our coach', 'gecko') ?>
 							</a>
 						</ul>
