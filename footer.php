@@ -1,3 +1,4 @@
+  <?php global $gecko; ?>
   </main>
 
   <!-- Footer -->
@@ -23,10 +24,13 @@
         <?php get_template_part('template-parts/social-icons', null) ?>
       </div>
       <!-- Sign -->
-      <div class="flex justify-between border-t border-t-neutral-900">
+      <div class="flex justify-between items-end border-t border-t-neutral-900">
         <p class="pt-4 font-light text-center">
           © <?php echo wp_date('Y') ?> Xtreme Gecko
         </p>
+        <div>
+          <?php $gecko->print_lang_switch() ?>
+        </div>
         <p class="pt-4 font-light text-center">
           Website by <a href="https://valerypronin.com" class="font-bold hover:text-blue-500">Valery Pronin</a>
         </p>

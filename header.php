@@ -86,6 +86,9 @@ global $gecko;
 							<?php _e('Contacts', 'gecko') ?>
 						</a>
 					</div>
+					<div class="hidden lg:inline ml-8">
+						<?php $gecko->print_lang_switch() ?>
+					</div>
 				</nav>
 			</div>
 		</div>
@@ -118,6 +121,10 @@ global $gecko;
 						<a href="#form" class="self-center button">
 							<?php _e('Contacts', 'gecko') ?>
 						</a>
+						<!-- LangSwitch -->
+						<div class="flex justify-center">
+							<?php $gecko->print_lang_switch() ?>
+						</div>
 					</div>
 				</div>
 			</div>

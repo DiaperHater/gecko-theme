@@ -59,6 +59,30 @@ class GeckoTheme
       $this->current_lang = pll_current_language();
     }
   }
+
+  public function print_lang_switch()
+  {
+    if (false === function_exists('pll_the_languages')) {
+      return;
+    }
+
+    $langs = pll_the_languages(array(
+      'raw' => true,
+      'hide_current' => true,
+    ));
+
+    if ($langs && !empty($langs)) {
+      ob_start();
+      foreach ($langs as $lang) {
+        ?>
+        <a href="<?php echo $lang['url'] ?>" class="text-inherit capitalize hover:text-blue-500 duration-200">
+          <?php echo $lang['slug'] ?>
+        </a>
+        <?php
+      }
+      echo ob_get_clean();
+    }
+  }
 }
 $gecko = new GeckoTheme();
 
