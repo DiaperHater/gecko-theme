@@ -86,4 +86,8 @@
   .wpcf7-response-output {
     @apply md:col-span-6;
   }
+
+  .grecaptcha-badge {
+    @apply invisible;
+  }
 }

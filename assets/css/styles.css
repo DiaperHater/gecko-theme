@@ -748,6 +748,10 @@ textarea.custom-form-input {
   }
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -998,6 +1002,18 @@ textarea.custom-form-input {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
 }
 
 .box-border {
@@ -2708,6 +2724,10 @@ textarea.custom-form-input {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-inherit {
+  color: inherit;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3328,6 +3348,10 @@ textarea.custom-form-input {
     display: grid;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:w-\[66\%\] {
     width: 66%;
   }
@@ -3438,6 +3462,10 @@ textarea.custom-form-input {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:inline {
+    display: inline;
   }
 
   .lg\:flex {

@@ -12,5 +12,6 @@ module.exports = {
     'wpcf7-response-output',
     'wpcf7-select',
     'wpcf7-checkbox',
+    'grecaptcha-badge'
   ],
 }
