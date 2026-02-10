@@ -66,6 +66,24 @@ add_action('acf/init', function () {
             'display' => 'block',
             'sub_fields' => array(
               array(
+                'key' => 'about_video',
+                'name' => 'about_video',
+                'label' => 'about_video',
+                'type' => 'file',
+                'return_format' => 'array',
+                'mime_types' => 'mp4',
+              ),
+              array(
+                'key' => 'about_video_poster',
+                'name' => 'about_video_poster',
+                'label' => 'about_video_poster',
+                'type' => 'image',
+                'return_format' => 'array',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'mime_types' => 'jpg, jpeg, png, webp, svg',
+              ),
+              array(
                 'key' => 'about_intro',
                 'name' => 'about_intro',
                 'label' => 'Intro',
