@@ -14,7 +14,7 @@ Edit style sources in _assets/css/src/input.css_
 
 - [ ] SEO Works
   - [x] Translate
-  - [ ] Recolor
-  - [ ] Update media
-  - [ ] Upload
+  - [x] Recolor
+  - [x] Update media
+  - [x] Upload
   - [ ] Write out tasks from Journal

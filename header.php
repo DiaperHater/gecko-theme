@@ -15,35 +15,9 @@ global $gecko;
 
 	<?php wp_head() ?>
 
-	<!-- START Script that provides structured data about a local business in Dubai -->
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"url": "https://dxbskating.com",
-			"openingHoursSpecification": {
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-				"opens": "08:00",
-				"closes": "22:00"
-			}
-			"@type": "LocalBusiness",
-			"name": "<?php _e('Roller skating classes in Dubai', 'gecko') ?>",
-			"image": "https://dxbskating.com/wp-content/uploads/2024/02/332792747_1242813499964178_1093700584803525692_n-1024x768.jpeg",
-			"description": "<?php _e('Professional Roller Skating Classes in Dubai for Adults and Children. Group and Private Lessons Available.', 'gecko') ?>",
-			"address": {
-				"@type": "PostalAddress",
-				"addressLocality": "Dubai",
-				"addressRegion": "UAE"
-			},
-			"telephone": "+971558730851 ",
-			"priceRange": "AED 75-300 per session"
-		}
-	</script>
-	<!-- END Script that provides structured data about a local business in Dubai -->
-
 	<title><?= get_the_title() ?></title>
 
-	<link rel="icon" type="image/png" sizes="32x32" href="<?= get_template_directory_uri() ?>/assets/images/favicon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?= get_template_directory_uri() ?>/assets/images/favicon.ico">
 
 </head>
 
@@ -57,7 +31,7 @@ global $gecko;
 				<nav class="header__inner py-3 flex items-center duration-200 group-[.narrow]/header:px-6 group-[.narrow]/header:bg-neutral-900 group-[.narrow]/header:bg-opacity-70 group-[.narrow]/header:backdrop-blur-sm group-[.narrow]/header:rounded-lg">
 					<!-- Logo -->
 					<a href="/" class="mr-12 text-2xl font-bold leading-none divide-purple-200 hover:text-blue-500">
-						<img src="<?php $gecko->print_image_src('logo.png')?>" alt="<?php $gecko->print_image_alt('Logo') ?>" class="h-12 lg:h-20 w-auto">
+						<img src="<?php $gecko->print_image_src('logo.png') ?>" alt="<?php $gecko->print_image_alt('Logo') ?>" class="h-12 lg:h-20 w-auto">
 					</a>
 					<!-- Links -->
 					<ul class="hidden lg:flex lg:items-center lg:gap-x-4 lg:ml-auto">
